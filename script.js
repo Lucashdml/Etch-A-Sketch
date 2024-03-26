@@ -16,8 +16,14 @@ const createGrid = (gridAmount) => {
       gridItem.style.height = `${widthAndHeight}px`;
       gridItem.style.width = `${widthAndHeight}px`;
 
+      function randomHexColor() {
+        let hex = Math.round(Math.random() * 0xffffff).toString(16);
+        while (hex.length < 6) hex = "0" + hex;
+        return "#" + hex;
+      }
+
       gridItem.addEventListener("mouseenter", () => {
-        gridItem.style.backgroundColor = "#d65d0e";
+        gridItem.style.backgroundColor = `${randomHexColor()}`;
       });
       row.appendChild(gridItem);
     }
