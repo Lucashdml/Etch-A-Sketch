@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 560px;
+}
+
+.row {
+  display: flex;
+}
+
+.grid-item {
+  border: 1px solid black;
+  background-color: white;
+}
