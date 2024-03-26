@@ -22,4 +22,12 @@ body {
 
 button {
   display: flex;
+  padding: 20px;
+  margin: 50px;
+  background-color: #98971a;
+  border: 5px solid #cc241d;
+  font-size: 25px;
+  font-weight: 900;
+  border-radius: 8px;
+  cursor: pointer;
 }
