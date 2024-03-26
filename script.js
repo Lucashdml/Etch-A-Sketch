@@ -15,6 +15,7 @@ const createGrid = (gridAmount) => {
       gridItem.classList.add("grid-item");
       gridItem.style.height = `${widthAndHeight}px`;
       gridItem.style.width = `${widthAndHeight}px`;
+      gridItem.style.opacity = 1;
 
       function randomHexColor() {
         let hex = Math.round(Math.random() * 0xffffff).toString(16);
@@ -24,6 +25,7 @@ const createGrid = (gridAmount) => {
 
       gridItem.addEventListener("mouseenter", () => {
         gridItem.style.backgroundColor = `${randomHexColor()}`;
+        gridItem.style.opacity -= 0.1;
       });
       row.appendChild(gridItem);
     }
