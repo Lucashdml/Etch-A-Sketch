@@ -1,6 +1,6 @@
 const container =  document.querySelector('.container');
 
-const gridSize = 5;
+const gridSize = 16;
 
 const createGrid = (gridAmount) => {
   for (let i = 0; i < gridAmount; i++) {
@@ -13,6 +13,10 @@ const createGrid = (gridAmount) => {
       gridItem.classList.add('grid-item');
       gridItem.style.height = `${widthAndHeight}px`;
       gridItem.style.width = `${widthAndHeight}px`;
+      
+      gridItem.addEventListener('mouseenter', () => {
+        gridItem.style.backgroundColor = '#d65d0e'
+      })
       row.appendChild(gridItem)
     }
     
